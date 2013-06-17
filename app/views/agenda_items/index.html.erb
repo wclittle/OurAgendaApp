@@ -1,0 +1,27 @@
+<h1>Listing agenda_items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @agenda_items.each do |agenda_item| %>
+      <tr>
+        <td><%= agenda_item.title %></td>
+        <td><%= link_to 'Show', agenda_item %></td>
+        <td><%= link_to 'Edit', edit_agenda_item_path(agenda_item) %></td>
+        <td><%= link_to 'Destroy', agenda_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Agenda item', new_agenda_item_path %>
