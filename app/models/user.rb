@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   has_secure_password
   before_validation :secure_password_digest
 
+  validates :email, presence: true 
+
   private
 
   # if password_digest is blank, create a random password.
