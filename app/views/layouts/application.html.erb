@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>OurAgendaApp</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <meta charset="UTF-8">
+  <title><%= @page_title %></title>
+  <meta name="description" content="<%= @page_description %>">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>  
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
+  <!--[if (lt IE 9) & (!IEMobile)]>
+    <%= javascript_include_tag "css3-mediaqueries" %>
+  <![endif]-->
 </head>
 <body>
-
-<%= yield %>
-
+  <%= yield %>
+  <%= render partial: "home/footer" %>
 </body>
 </html>

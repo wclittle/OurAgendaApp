@@ -1,0 +1,74 @@
+/*-----------------------------
+Variables
+------------------------------*/
+
+$beige: #f0ebe2; 
+$lightBeige: #f8f5ec;
+$darkBeige: #cdcac2;
+$blue: #3d6298;
+$midBlue: #2b477a;
+$orange: #f6a62a;
+$midOrange: #de9523;
+$darkOrange: #b4791b;
+$black: #232323;
+$light_gray: #ccc9c4;
+
+/*-----------------------------
+Mixins
+------------------------------*/
+
+@mixin orangeGradient {
+	background-color: $orange;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($orange), to($midOrange));
+  background-image: -moz-linear-gradient($orange, $midOrange);
+  background-image: -ms-linear-gradient($orange, $midOrange);
+  background-image: -o-linear-gradient($orange, $midOrange);
+  background-image: linear-gradient($orange, $midOrange);
+  -moz-background-clip: padding; 
+  background-clip: padding-box;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+@mixin orangeGradient_hover {
+	background-color: $midOrange;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($orange));
+  background-image: -moz-linear-gradient( $orange);
+  background-image: -ms-linear-gradient( $orange);
+  background-image: -o-linear-gradient( $orange);
+  background-image: linear-gradient( $orange);
+  -moz-background-clip: padding; 
+  background-clip: padding-box;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+@mixin blueGradient {
+  background-color: $blue;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($blue), to($midBlue));
+  background-image: -moz-linear-gradient($blue, $midBlue);
+  background-image: -ms-linear-gradient($blue, $midBlue);
+  background-image: -o-linear-gradient($blue, $midBlue);
+  background-image: linear-gradient($blue, $midBlue);
+  -moz-background-clip: padding; 
+  background-clip: padding-box;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+@mixin blueGradient_hover {
+  background-color: $blue;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from($blue), to($blue));
+  background-image: -moz-linear-gradient($blue);
+  background-image: -ms-linear-gradient($blue);
+  background-image: -o-linear-gradient($blue);
+  background-image: linear-gradient($blue);
+  -moz-background-clip: padding; 
+  background-clip: padding-box;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,83 @@
+/*-----------------------------
+Typography styles
+------------------------------*/
+
+@import "variables.scss";
+
+html {
+	font-family: 'Source Sans Pro', 'verdana', sans-serif;
+	font-size: 100%;
+	font-weight: 300; // use 300 - book or 400 - normal (for bold)
+	color: $black;
+	line-height: 1.4;
+	@media screen and (max-width: 29.4375em) {
+		font-size: 95%;
+	}
+}
+
+/*-----------------------------
+$Links
+------------------------------*/
+
+a {
+  color: $blue;
+  text-decoration: underline;
+}
+
+a:focus,
+a:hover {
+  color: $orange;
+}
+
+/*-----------------------------
+$Headers
+------------------------------*/
+
+h1, h2, h3, h4, {
+	font-weight: 300;
+	color: $blue;
+	margin: 0 0 0.25em;
+	line-height: 1;
+}
+
+h1 {
+	font-size: 3.375em;
+	@media screen and (min-width: 40em) {
+		font-size: 5.063em;
+	}
+}
+
+h2 {
+	font-size: 3.375em;
+}
+
+h3 {
+	font-size: 2.25em;
+}
+
+h4 {
+	font-size: 1.5em;
+}
+
+.heroTitle, .heroForm {
+	text-align: center;
+	color: #fff;
+}
+
+.heroForm {
+	font-size: 1.25em;
+}
+
+.heroDescription {
+	margin: 0.15em 0 1.25em 0;
+	color: #fff;
+}
+
+.largeHeader {
+	text-align: center;
+	margin: 0;
+}
+
+.appFeature_header {
+	text-align: center;
+}

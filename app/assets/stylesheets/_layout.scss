@@ -1,0 +1,120 @@
+/*-----------------------------
+Layout styles
+------------------------------*/
+
+@import "variables.scss";
+
+/*-----------------------------
+$Grid
+------------------------------*/
+
+.container {
+	max-width: 60em;
+	position: relative;
+	margin: 0 auto 2.75em;
+	padding: 0.75em 0 2.5em 0;
+	background-color: #ffffff;
+	border-right: 1px solid $light_gray;
+	border-bottom: 1px solid $light_gray;
+	border-left: 1px solid $light_gray;
+	 -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.container:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.grid {
+	padding: 0 2.5%;
+}
+
+[class*="col_"] {
+	display: block;
+	margin: 1.5%;
+}
+
+@media screen and (min-width: 10em) {
+
+	.container {
+		width: 100%;
+	}
+
+	.col_1, .col_2, .col_3, .col_4 {
+		width: 98%;
+	}
+
+	.heroBanner_col_2, .heroBanner_col_2_reverse {
+		width: 98%;
+	}
+
+	.heroBanner.col_4 {
+		width: 100%;
+		padding: 1.75% 2%;
+		margin: 1em 0 1.5em;
+	}
+
+}
+
+@media screen and (min-width: 52em) {
+
+	.container {
+		width: 92%;
+	}
+
+	[class*="col_"] {
+		float: left;
+	}
+
+	.col_1 {
+		width: 22%;
+	}
+
+	.col_2 {
+		width: 47%;
+	}
+
+	.col_3 {
+		width: 72%;
+	}
+
+	.col_4 {
+		width: 97%;
+	}
+
+} 
+
+@media screen and (min-width: 70em) {
+
+	.heroBanner_col_2 {
+		width: 46%;
+	}
+
+	.heroBanner_col_2_reverse {
+		width: 46%;
+		float: right;
+	}
+}
+
+@media screen and (min-width: 40em) {
+
+	.dashboardContainer .col_1 {
+		width: 47%;
+		float: left;
+	}
+}
+
+@media screen and (min-width: 75em) {
+
+	.dashboardContainer .col_1 {
+		width: 22%;
+		float: left;
+	}
+}
+
+.cf:before, .cf:after { content:""; display:table; }
+.cf:after { clear:both; }
+.cf { zoom:1; } /* For IE 6/7 (trigger hasLayout) */
