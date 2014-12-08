@@ -14,6 +14,7 @@ OurAgendaApp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'home#index'
+  get 'sign-up' => 'home#sign_up'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -49,7 +50,7 @@ OurAgendaApp::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

@@ -5,14 +5,39 @@
   <title><%= @page_title %></title>
   <meta name="description" content="<%= @page_description %>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>  
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <!--[if (lt IE 9) & (!IEMobile)]>
     <%= javascript_include_tag "css3-mediaqueries" %>
   <![endif]-->
 </head>
 <body>
-  <%= yield %>
+
+  <div class="container">
+    <div class="grid">
+      <div class="header col_4 cf">
+
+        <div class="logo">
+        <a href=""><img src="<%= asset_path "OAA_logo_web.png" %>" alt="Our Agenda App Logo"/></a>
+        </div><!-- end logo -->
+
+        <nav>
+        <ul class="navMenu">
+          <li class="navMenu_item"><a href="">About</a></li>
+          <li class="navMenu_item"><a href="">Contact</a></li>
+          <li class="navMenu_item_button"><a class="button buttonSignup" href="">Sign up</a></li>
+        </ul>
+        </nav><!-- end nav -->
+
+      </div><!-- end header -->
+
+    </div><!-- end grid -->
+
+    <%= yield %>
+
+  </div><!-- end contianer -->
+
   <%= render partial: "home/footer" %>
+
 </body>
 </html>

@@ -85,7 +85,7 @@ $Grid
 		width: 97%;
 	}
 
-} 
+}
 
 @media screen and (min-width: 70em) {
 
@@ -118,3 +118,5 @@ $Grid
 .cf:before, .cf:after { content:""; display:table; }
 .cf:after { clear:both; }
 .cf { zoom:1; } /* For IE 6/7 (trigger hasLayout) */
+
+.centered_col {width: 20em; margin: 0 auto;}
